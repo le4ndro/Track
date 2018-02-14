@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Track.Web.ViewModels.ProjectViewModel>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "List";
+}
+
+
+<div class="page-header">
+    <h1>Projects</h1>
+</div>
+
+
+<p>
+    @Html.ActionLink("New Project", "Create", null, new { @class = "btn btn-primary" })
+</p>
+
+
+<table class="table table-bordered table-condensed table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Description</td>
+                <td>@item.StartDate</td>
+                <td>@item.FinishDate</td>
+                <td style="width:15%">
+                    @Html.ActionLink("Details", "Details", new { id = item.ProjectID }, new { @class = "btn btn-primary btn-xs" })
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ProjectID }, new { @class = "btn btn-primary btn-xs" })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ProjectID }, new { @class = "delete btn btn-danger btn-xs" })
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+
+
+@section Scripts {
+    <script>
+        $(document).on("click", '.delete', function (event) {
+            if (!confirm("Are you sure you want to delete this?")) {
+                return false;
+            }
+        });
+    </script>
+}
