@@ -1,11 +1,11 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2027
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C9B462CB-6864-4E51-B1D8-1B96082102BE}"
 EndProject
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Track.Model", "src\Track.Model\Track.Model.csproj", "{5E61183E-314C-4ECA-9723-56A2EE135F07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Track.Model", "src\Track.Model\Track.Model.csproj", "{5E61183E-314C-4ECA-9723-56A2EE135F07}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Track.Data", "src\Track.Data\Track.Data.csproj", "{90E2239A-8A33-4DB6-89F2-635EECCCD628}"
 EndProject
